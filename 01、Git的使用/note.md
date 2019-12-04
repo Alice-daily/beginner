@@ -95,28 +95,28 @@
         1e38e1e (HEAD -> master) HEAD@{0}: reset: moving to HEAD^
         76a12e3 HEAD@{1}: commit: add content
         1e38e1e (HEAD -> master) HEAD@{2}: commit (initial): add a new file
-    
     ```
-使用git reflog可以查询使用过的每一个命令的记录，从查询结果可以发现"add content"的版本号为76a12e3
+    使用git reflog可以查询使用过的每一个命令的记录，从查询结果可以发现"add content"的版本号为76a12e3
 
     ```
         $ git reset --hard 76a12e3
     ```
+
 此时回到了回退之前的版本
 
 #### 六、远程仓库
 - ##### 添加远程库
-1）关联远程库
+    1）关联远程库
     ```
         $ git remote add origin https://github.com/Alice-daily/beginner.git
     ```
-2）关联后，第一次推送时，需要把master分支的所有内容推送到远程仓库
+    2）关联后，第一次推送时，需要把master分支的所有内容推送到远程仓库
 
     ```
         $ git push -u origin master
     ```
 
-3）此后，每次本地提交后，只要有必要，就可以使用下面的命令推送最新修改
+    3）此后，每次本地提交后，只要有必要，就可以使用下面的命令推送最新修改
 
     ```
         $ git push origin master
